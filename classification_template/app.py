@@ -25,7 +25,8 @@ def predict():
     """
     basic predict function for the API
     """
-
+    #print("Test")
+    #print("******", type(request.json['query']))
     # input checking
     if not request.json:
         print("ERROR: API (predict): did not receive request data")
@@ -40,7 +41,8 @@ def predict():
         print("WARNING API (predict): received request, but no 'type' was "
               "found assuming 'numpy'")
         query_type = 'numpy'
-
+        
+        
     # set the test flag
     test = False
     if 'mode' in request.json and request.json['mode'] == 'test':
@@ -48,7 +50,16 @@ def predict():
 
     # extract the query
     query = request.json['query']
-
+    
+    if query == []:
+        print("Empty list")
+        return jsonify([])
+    
+    if np.array(query).shape[1] != 2:
+        print("ERROR: Wrong shape!!!!!")
+        return jsonify([])
+    
+    
     if request.json['type'] == 'numpy':
         query = np.array(query)
     else:
@@ -87,6 +98,11 @@ def train():
     # check for request data
     if not request.json:
         print("ERROR: API (train): did not receive request data")
+        return jsonify(False)
+    
+    if 'mode' not in request.json:
+        print("ERROR API (predict): received request, but no 'mode' found "
+              "within")
         return jsonify(False)
 
     # set the test flag

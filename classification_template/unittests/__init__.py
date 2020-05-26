@@ -21,12 +21,16 @@ for o, a in optlist:
     if o == '-v':
         VERBOSE = True
 
-# model tests
-from ModelTests import *
-ModelTestSuite = unittest.TestLoader().loadTestsFromTestCase(ModelTest)
+# # model tests
+# from ModelTests import *
+# ModelTestSuite = unittest.TestLoader().loadTestsFromTestCase(ModelTest)
 
-# logger tests
-from LoggerTests import *
-LoggerTestSuite = unittest.TestLoader().loadTestsFromTestCase(LoggerTest)
+# # logger tests
+# from LoggerTests import *
+# LoggerTestSuite = unittest.TestLoader().loadTestsFromTestCase(LoggerTest)
 
-MainSuite = unittest.TestSuite([LoggerTestSuite,ModelTestSuite])
+from ApiTests import *
+ApiTestSuite = unittest.TestLoader().loadTestsFromTestCase(ApiTest)
+
+#MainSuite = unittest.TestSuite([LoggerTestSuite,ModelTestSuite,ApiTestSuite])
+MainSuite = unittest.TestSuite([ApiTestSuite])

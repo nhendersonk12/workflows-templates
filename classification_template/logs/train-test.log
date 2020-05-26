@@ -1,0 +1,4 @@
+unique_id,timestamp,x_shape,eval_test,model_version,model_version_note,runtime
+1c8a7a05-8f25-4e8f-b9b2-b0d197c93a4b,1590521870.0448062,"(100, 10)",{'rmse': 0.5},0.1,test model,00:00:01
+2e34bd27-839a-4b75-b201-000753d7d53e,1590521870.046795,"(100, 10)",{'rmse': 0.5},0.1,test model,00:00:01
+b5d2a477-2d99-44ba-8945-0a87ac0e6404,1590521872.4058363,"(135, 2)","{'0': {'precision': 1.0, 'recall': 1.0, 'f1-score': 1.0, 'support': 8}, '1': {'precision': 0.5, 'recall': 0.625, 'f1-score': 0.5555555555555556, 'support': 8}, '2': {'precision': 0.6666666666666666, 'recall': 0.5454545454545454, 'f1-score': 0.6, 'support': 11}, 'accuracy': 0.7037037037037037, 'macro avg': {'precision': 0.7222222222222222, 'recall': 0.7234848484848485, 'f1-score': 0.7185185185185184, 'support': 27}, 'weighted avg': {'precision': 0.7160493827160493, 'recall': 0.7037037037037037, 'f1-score': 0.7053497942386832, 'support': 27}}",0.1,SVM on toy data,000:00:02
