@@ -1,2 +1,6 @@
 # workflows-templates
-AI Workflows for Business: workflow templates
+
+AI Workflows for Business: Workflow Templates
+
+Assignment located in `assignment.md`
+
